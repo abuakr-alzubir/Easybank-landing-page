@@ -6,11 +6,11 @@ const About = ({ className }: { className?: string }) => {
     return (
         <>
             <Section id="about" className="bg-neutral-100">
-                <Container>
+                <Container className={className}>
                     <article>
                         <h2>why choose Easybank?</h2>
                         <p>
-                            {" "}
+                            
                             We leverage Open Banking to turn your bank account
                             into your financial hub. Control your finances like
                             never before.
