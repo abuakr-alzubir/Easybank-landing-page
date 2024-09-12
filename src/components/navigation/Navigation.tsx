@@ -14,7 +14,7 @@ const Navigation = () => {
                     <Logo />
                     <button
                         className="lg:hidden"
-                        onClick={(_) => setIsOpen((prev) => !prev)}
+                        onClick={() => setIsOpen((prev) => !prev)}
                     >
                         {isOpen ? (
                             <Image
