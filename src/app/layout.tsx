@@ -25,7 +25,7 @@ export default function RootLayout({
             <body
                 className={` ${sublic_sans.className} ${sublic_sans.className} antialiased`}
             >
-                <header className="">
+                <header className="relative bg-white shadow-lg z-50">
                     <NavigationDesktop />
                     <Navigation />
                 </header>

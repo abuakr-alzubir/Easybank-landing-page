@@ -5,12 +5,12 @@ import Image from "next/image";
 const Articles = () => {
     return (
         <>
-            <Section className="bg-neutral-50">
-                <Container>
-                    <h2>latest articles</h2>
-                    <article>
+            <Section id="articles" className="bg-neutral-50">
+                <Container className="">
+                    <h2 className="text-slate-900 opacity-75 text-3xl capitalize mb-4">latest articles</h2>
+                    <article className="grid grid-cols-1 lg:grid-cols-4 items-start justify-center gap-4 lg:gap-8">
                         {data.map((item, idex) => (
-                            <div key={idex}>
+                            <div key={idex} className="flex flex-col">
                                 <Image
                                     src={item.image}
                                     alt="article"
@@ -18,12 +18,12 @@ const Articles = () => {
                                     height={0}
                                     priority
                                     sizes="100vw"
-                                    className="w-12"
+                                    className="w-full h-auto lg:h-44"
                                 />
-                                <div>
-                                    <span>{item.writter}</span>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.desc}</p>
+                                <div className="p-4 bg-white flex flex-col gap-2">
+                                    <span className="text-slate-600 opacity-75 text-xs">{item.writter}</span>
+                                    <h3 className="text-slate-900 text-lg hover:cursor-pointer hover:text-green-500">{item.title}</h3>
+                                    <p className="text-slate-600 opacity-75 text-sm">{item.desc}</p>
                                 </div>
                             </div>
                         ))}

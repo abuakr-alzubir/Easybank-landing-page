@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About className="bg-slate-400" />
+      <About/>
       <Articles />
     </>
   );

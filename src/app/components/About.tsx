@@ -2,23 +2,23 @@ import Image from "next/image";
 import React from "react";
 import { Section, Container } from "@/components/SectionContainer";
 
-const About = ({ className }: { className?: string }) => {
+const About = () => {
     return (
         <>
             <Section id="about" className="bg-neutral-100">
-                <Container className={className}>
-                    <article>
-                        <h2>why choose Easybank?</h2>
-                        <p>
+                <Container>
+                    <article className="text-center">
+                        <h2 className="text-slate-900 opacity-75 capitalize py-4 text-3xl">why choose Easybank?</h2>
+                        <p className="text-slate-500">
                             
                             We leverage Open Banking to turn your bank account
                             into your financial hub. Control your finances like
                             never before.
                         </p>
                     </article>
-                    <article>
+                    <article className="grid grid-cols-1 lg:grid-cols-4 items-center justify-center p-4 gap-4 lg:gap-8">
                         {data.map((item, idx) => (
-                            <div key={idx}>
+                            <div key={idx} className="flex flex-col gap-4 items-center lg:items-start justify-centre text-center lg:text-left">
                                 <Image
                                     src={item.image}
                                     alt="data"
@@ -26,9 +26,9 @@ const About = ({ className }: { className?: string }) => {
                                     height={0}
                                     priority
                                     sizes="100vw"
-                                    className="w-12"
+                                    className="w-20"
                                 />
-                                <h3>{item.title}</h3>
+                                <h3 className="text-3xl lg:text-2xl capitalize text-slate-900 opacity-75">{item.title}</h3>
                                 <p>{item.des}</p>
                             </div>
                         ))}
