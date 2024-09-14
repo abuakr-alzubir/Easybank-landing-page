@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "./Logo";
 import SociaolMediaLinks from "./SociaolMediaLinks";
 import { Section, Container } from "./SectionContainer";
-import Links from "./navigation/Links";
 import LinksFooter from "./navigation/LinksFooter";
 import Button from "./Button";
 
